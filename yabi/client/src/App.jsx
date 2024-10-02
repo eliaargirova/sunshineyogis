@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import "./app.scss"
 
+
 const Layout = () => {
   return (
     <div className="app">
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div>
+    <div style={{ fontFamily: 'Lora, serif' }}>
       <RouterProvider router={router} />
     </div>
   );
