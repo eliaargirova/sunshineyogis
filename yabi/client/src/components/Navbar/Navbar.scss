@@ -62,7 +62,7 @@ html, body {
     }
   
     /* Hide the desktop navbar on small screens */
-    @media (max-width: 768px) {
+    @media (max-width: 937px) {
       .left, .right {
         display: none;
       }
@@ -106,10 +106,20 @@ html, body {
     }
   
     /* Hide burger menu icon on large screens */
-    @media (min-width: 768px) {
+    @media (min-width: 937px) {
       .burger-menu {
         display: none;
       }
     }
+
+    @media (max-width: 1096px) {
+      .logo {
+        display: none;
+      }
+      .sun-image-2{
+        display: none;
+      }
+    }
+
   }
   
