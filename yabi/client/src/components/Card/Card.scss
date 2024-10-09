@@ -1,0 +1,147 @@
+.card {
+    width: 300px; // Change this to a responsive width
+    max-width: 100%; // Ensure it doesn't exceed the container width
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  
+    .image {
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+  
+      &:hover {
+        .secondImg {
+          z-index: 2;
+        }
+      }
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+      }
+  
+      .mainImg {
+        z-index: 1;
+      }
+  
+      span {
+        position: absolute;
+        top: 20px;
+        left: 5px;
+        background-color: rgba(255, 255, 255, 0.702);
+        color: black;
+        padding: 3px 5px;
+        z-index: 3;
+      }
+    }
+  
+    h2 {
+      font-weight: 600;
+      margin-top: -1px;
+    }
+  
+    .prices {
+      display: flex;
+      margin-top: -40px;
+      gap: 30px;
+  
+      .price-header {
+        font-size: 24px;
+  
+        &:first-child {
+          color: gray;
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 609px) {
+    .card {
+      width: 270px; // Two cards side by side with a small gap
+      height: 500px;
+      margin-bottom: 20px; // Space between rows
+
+      h2 {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    
+      .prices {
+        display: flex;
+        margin-top: -30px;
+        gap: 10px;
+    
+        .price-header {
+          font-size: 18px;
+    
+          &:first-child {
+            color: gray;
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+
+    
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      width: 100px; // Full width on mobile
+      height: 400px;
+      margin-bottom: -150px;
+
+      .image {
+        width: 100%;
+        height: 150px;
+        overflow: hidden;
+        position: relative;
+    
+        &:hover {
+          .secondImg {
+            z-index: 2;
+          }
+        }
+    
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+        }
+    
+        .mainImg {
+          z-index: 1;
+        }
+    
+        span {
+          display: none;
+        }
+      }
+      h2 {
+        font-size: 14px;
+        font-weight: 600;
+      }
+    
+      .prices {
+        display: flex;
+        margin-top: -30px;
+        gap: 10px;
+    
+        .price-header {
+          font-size: 16px;
+    
+          &:first-child {
+            color: gray;
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+  }
+  

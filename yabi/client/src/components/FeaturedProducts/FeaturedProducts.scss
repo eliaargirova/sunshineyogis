@@ -1,0 +1,31 @@
+.featuredProducts {
+
+    margin: 50px 0;
+  
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .bottom {
+ 
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap; // Allow items to wrap into a new row
+  
+      // Media Queries for responsiveness
+    //   @media (max-width: 610px) { // Tablet and below
+    //     justify-content: space-between;
+    //     gap: 20px; // Reduce gap on smaller screens
+    
+    //   }
+  
+      @media (max-width: 768px) { // Mobile and below
+        justify-content: center; // Center items
+        gap: 10px; // Further reduce gap
+      }
+    }
+  }
+  
