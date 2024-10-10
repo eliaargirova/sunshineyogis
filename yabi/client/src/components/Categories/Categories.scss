@@ -1,30 +1,56 @@
-.categories{
+.categories {
     display: flex;
     height: 80vh;
-    // gap:10px; //for each column
     margin: 10px;
 
-    .col{
-        flex:1;
+    .col {
+        flex: 1;
         display: flex;
         flex-direction: column;
-    
-
-
-
-    }
-    .col-l{
-        flex:2;
     }
 
-    .row{
-        flex:1;
+    .col-l {
+        flex: 2;
+    }
+
+    .row {
+        flex: 1;
         display: flex;
         position: relative;
         overflow: hidden;
 
-        button{
+        .image-container {
+            position: relative; /* Set up container to position overlay */
+            width: 100%;
+            height: 100%;
+
+            /* Apply the hover effect to the container */
+            &:hover::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent grey */
+                z-index: 1;
+                pointer-events: none; /* Ensure overlay does not block the button */
+                transition: opacity 0.3s ease;
+            }
+
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: relative;
+                z-index: 0; /* Image is behind the overlay */
+            }
+        }
+
+        button {
             position: absolute;
+            z-index: 2; /* Ensure the button is above the overlay */
             min-width: 100px;
             width: fit-content;
             height: 50px;
@@ -40,14 +66,5 @@
             font-size: 24px;
             color: white;
         }
-      
-
-        img{
-            width:100%;
-            height: 100%;
-            object-fit: cover;
-        }
     }
-
-
 }
